@@ -22,6 +22,7 @@ Postacie to kiwi (ptak), jak umierają to przecinają się jak kiwi (owoc)
 
 Fabuła to wpadają w dziure i musza się wydostać
 
+<br><br>
 
 
 
