@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://cl0rxhdhh54iy"]
 
+[ext_resource type="PackedScene" uid="uid://c7voinrbyg0af" path="res://src/scenes/level1.tscn" id="1_lt075"]
+[ext_resource type="PackedScene" uid="uid://02ehlc3tjl4o" path="res://src/scenes/player1.tscn" id="1_wwqub"]
+[ext_resource type="PackedScene" uid="uid://cug2wfloympf8" path="res://src/scenes/player2.tscn" id="3_r3nyt"]
+
 [node name="MainGame" type="Node" unique_id=1665275105]
 process_mode = 3
 
@@ -10,9 +14,20 @@ process_mode = 1
 
 [node name="LevelRoot" type="Node2D" parent="World" unique_id=158982841]
 
+[node name="level1" parent="World/LevelRoot" unique_id=606240797 instance=ExtResource("1_lt075")]
+
 [node name="EntityRoot" type="Node2D" parent="World" unique_id=238357778]
 
+[node name="Player1" parent="World/EntityRoot" unique_id=561088767 instance=ExtResource("1_wwqub")]
+position = Vector2(22, 295)
+
+[node name="Player2" parent="World/EntityRoot" unique_id=166518649 instance=ExtResource("3_r3nyt")]
+position = Vector2(82, 295)
+
 [node name="EffectRoot" type="Node2D" parent="World" unique_id=924942402]
+
+[node name="Camera2D" type="Camera2D" parent="World/EffectRoot" unique_id=1097927966]
+position = Vector2(321, 182)
 
 [node name="HudLayer" type="CanvasLayer" parent="." unique_id=1331515537]
 process_mode = 1
