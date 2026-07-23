@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://df5mamr434xfc"]
+
+[ext_resource type="Script" uid="uid://b7p4jofadl66y" path="res://src/resources/button.gd" id="1_hoieh"]
+[ext_resource type="Texture2D" uid="uid://biivsh4uy7nn5" path="res://assets/art/world/BlueButton.png" id="2_r0mfd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dy88"]
+size = Vector2(1.75, 1.75)
+
+[node name="button" type="Area2D" unique_id=1918958502]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_hoieh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1766473576]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_r0mfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1652786772]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_7dy88")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://d2fgckti5mp10"]
+
+[ext_resource type="Script" uid="uid://cobgc6bvamsjk" path="res://src/resources/ladder.gd" id="1_fwyx5"]
+[ext_resource type="Texture2D" uid="uid://c7bso7erbahr3" path="res://assets/art/world/ladder.png" id="2_1oxal"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dy88"]
+size = Vector2(110, 625.3889)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_scns0"]
+size = Vector2(33.333332, 6.666668)
+
+[node name="ladder" type="Area2D" unique_id=923826196]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_fwyx5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=429620225]
+position = Vector2(-3.5762787e-07, -26.666658)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_1oxal")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1054713505]
+position = Vector2(-3.5762787e-07, -4.7683716e-07)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_1oxal")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=868635996]
+position = Vector2(-3.5762787e-07, 26.666662)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_1oxal")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=783925680]
+position = Vector2(5.684342e-14, 53.333332)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_1oxal")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1727705616]
+position = Vector2(-9.536743e-07, 79.99997)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_1oxal")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1363798515]
+position = Vector2(5.684342e-14, 106.66667)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_1oxal")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=1004730484]
+position = Vector2(5.684342e-14, 133.33334)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_1oxal")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1732601144]
+position = Vector2(1.4210855e-14, 52.858337)
+scale = Vector2(0.3, 0.3)
+shape = SubResource("RectangleShape2D_7dy88")
+
+[node name="top" type="Marker2D" parent="." unique_id=1517279061]
+position = Vector2(0, -60)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1269325360]
+position = Vector2(0, -43.333332)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=634539257]
+position = Vector2(5.9604645e-07, 0)
+shape = SubResource("RectangleShape2D_scns0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
