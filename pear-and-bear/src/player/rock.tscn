@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cn2hv0wgnq4mj"]
+
+[ext_resource type="Script" uid="uid://xipom35xk6a3" path="res://src/player/rock.gd" id="1_gsy0i"]
+[ext_resource type="Texture2D" uid="uid://c8bcq75rok7ot" path="res://assets/art/characters/rock.png" id="2_46lnl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7dy88"]
+radius = 1.0
+
+[node name="rock" type="Area2D" unique_id=1768890346]
+collision_mask = 5
+script = ExtResource("1_gsy0i")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1436503625]
+position = Vector2(1.4901161e-08, 0)
+scale = Vector2(0.04175122, 0.04411754)
+texture = ExtResource("2_46lnl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1617776935]
+shape = SubResource("CircleShape2D_7dy88")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

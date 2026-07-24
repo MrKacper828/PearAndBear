@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cl0rxhdhh54iy"]
 
 [ext_resource type="PackedScene" uid="uid://c7voinrbyg0af" path="res://src/scenes/level1.tscn" id="1_lt075"]
-[ext_resource type="PackedScene" uid="uid://02ehlc3tjl4o" path="res://src/scenes/player1.tscn" id="1_wwqub"]
-[ext_resource type="PackedScene" uid="uid://cug2wfloympf8" path="res://src/scenes/player2.tscn" id="3_r3nyt"]
+[ext_resource type="PackedScene" uid="uid://02ehlc3tjl4o" path="res://src/player/player1.tscn" id="1_wwqub"]
+[ext_resource type="PackedScene" uid="uid://cug2wfloympf8" path="res://src/player/player2.tscn" id="3_r3nyt"]
 
 [node name="MainGame" type="Node" unique_id=1665275105]
 process_mode = 3

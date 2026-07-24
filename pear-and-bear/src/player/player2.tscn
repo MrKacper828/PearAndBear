@@ -9,6 +9,8 @@ size = Vector2(112.50012, 112.5)
 [node name="Player2" type="CharacterBody2D" unique_id=166518649]
 position = Vector2(249, 177)
 scale = Vector2(0.4, 0.4)
+collision_layer = 2
+collision_mask = 15
 script = ExtResource("1_bdfj7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1344673920]
