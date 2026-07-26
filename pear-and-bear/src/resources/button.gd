@@ -11,7 +11,7 @@ func _on_body_entered(body) -> void:
 
 func _on_body_exited(body) -> void:
 	if body.name == "Player1" or body.name == "Player2":
-		current_player = body
+		current_player = null
 
 func _process(delta) -> void:
 	if current_player != null and not is_pressed:

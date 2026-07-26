@@ -171,6 +171,8 @@ texture = ExtResource("1_xiven")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_xiven")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_scns0"]
+
 [node name="level1" type="TileMapLayer" unique_id=606240797]
 tile_map_data = PackedByteArray("AAAAABQAAAAAAAAAAAABABQAAAAAAAAAAAACABQAAAAAAAAAAAADABQAAAAAAAAAAAAEABQAAAAAAAAAAAAFABQAAAAAAAAAAAAGABQAAAAAAAAAAAAIABIAAAAAAAAAAAAJABIAAAAAAAAAAAAKABIAAAAAAAAAAAALABIAAAAAAAAAAAAMABIAAAAAAAAAAAANABIAAAAAAAAAAAAOABIAAAAAAAAAAAATABQAAAAAAAAAAAAUABQAAAAAAAAAAAAVABQAAAAAAAAAAAAWABQAAAAAAAAAAAAXABQAAAAJAAAAAAAYABQAAAAKAAAAAAAZABQAAAAKAAAAAAAaABQAAAALAAAAAAAbABQAAAACAAEAAAAcABQAAAACAAEAAAAdABQAAAACAAEAAAAeABQAAAACAAEAAAA=")
 tile_set = SubResource("TileSet_scns0")
@@ -183,5 +185,11 @@ position = Vector2(433, 279)
 
 [node name="ladder" parent="." unique_id=923826196 instance=ExtResource("4_di3qs")]
 position = Vector2(151, 244)
+
+[node name="world floot" type="StaticBody2D" parent="." unique_id=811296970]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world floot" unique_id=329953816]
+position = Vector2(237, 422)
+shape = SubResource("WorldBoundaryShape2D_scns0")
 
 [connection signal="button_pressed" from="button" to="door" method="_on_button_button_pressed"]

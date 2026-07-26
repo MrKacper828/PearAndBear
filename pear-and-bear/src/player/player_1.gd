@@ -28,8 +28,6 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-var distance: float
-var split: bool = false
 func _process(delta: float) -> void:
 	if velocity.x > 0:
 		facing_direction = 1.0
@@ -39,14 +37,6 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ability1"):
 		throw_rock()
 		
-	#split screen dla graczy
-	var distance = global_position.distance_to($"../Player2".global_position)
-	if distance > 400 and split == false:
-		$"../".splitworld(0)
-		split = true
-	elif distance <= 400 and split == true:
-		$"../".splitworld(658)
-		split = false
 		
 #logika rzutu kamieniem		
 func throw_rock() -> void:
