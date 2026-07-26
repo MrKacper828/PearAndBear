@@ -1,33 +1,89 @@
 [gd_scene format=3 uid="uid://cl0rxhdhh54iy"]
 
+[ext_resource type="Script" uid="uid://tj3iyr60tkj8" path="res://src/core/main_game.gd" id="1_c5f53"]
 [ext_resource type="PackedScene" uid="uid://c7voinrbyg0af" path="res://src/scenes/level1.tscn" id="1_lt075"]
 [ext_resource type="PackedScene" uid="uid://02ehlc3tjl4o" path="res://src/player/player1.tscn" id="1_wwqub"]
+[ext_resource type="Script" uid="uid://bl4uciqn62mx0" path="res://src/core/player2camera.gd" id="3_m7syd"]
 [ext_resource type="PackedScene" uid="uid://cug2wfloympf8" path="res://src/player/player2.tscn" id="3_r3nyt"]
+[ext_resource type="Script" uid="uid://61myh34jyr17" path="res://src/player/camera_2nd_player.gd" id="6_wrvd8"]
+
+[sub_resource type="Gradient" id="Gradient_wrvd8"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7dy88"]
+gradient = SubResource("Gradient_wrvd8")
+width = 1
 
 [node name="MainGame" type="Node" unique_id=1665275105]
 process_mode = 3
+script = ExtResource("1_c5f53")
 
 [node name="Systems" type="Node" parent="." unique_id=453548905]
 
-[node name="World" type="Node2D" parent="." unique_id=1716055596]
+[node name="SplitPlayerCamera" type="Control" parent="." unique_id=536168413]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SplitPlayerCamera" unique_id=1348551281]
+
+[node name="HBoxContainer" type="SplitContainer" parent="SplitPlayerCamera/CanvasLayer" unique_id=2017689213]
+offset_right = 1036.0
+offset_bottom = 512.0
+theme_override_constants/separation = 0
+theme_override_constants/minimum_grab_thickness = 0
+theme_override_constants/autohide = 0
+theme_override_icons/h_grabber = SubResource("GradientTexture2D_7dy88")
+split_offsets = PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+dragging_enabled = false
+dragger_visibility = 1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer" unique_id=1257545935]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer" unique_id=629072300]
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(517, 512)
+render_target_update_mode = 4
+
+[node name="World" type="Node2D" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport" unique_id=1716055596]
 process_mode = 1
 
-[node name="LevelRoot" type="Node2D" parent="World" unique_id=158982841]
+[node name="LevelRoot" type="Node2D" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport/World" unique_id=158982841]
 
-[node name="level1" parent="World/LevelRoot" unique_id=606240797 instance=ExtResource("1_lt075")]
+[node name="level1" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport/World/LevelRoot" unique_id=606240797 instance=ExtResource("1_lt075")]
 
-[node name="EntityRoot" type="Node2D" parent="World" unique_id=238357778]
+[node name="EntityRoot" type="Node2D" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport/World" unique_id=238357778]
 
-[node name="Player1" parent="World/EntityRoot" unique_id=561088767 instance=ExtResource("1_wwqub")]
+[node name="Player1" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport/World/EntityRoot" unique_id=561088767 instance=ExtResource("1_wwqub")]
 position = Vector2(22, 295)
 
-[node name="Player2" parent="World/EntityRoot" unique_id=166518649 instance=ExtResource("3_r3nyt")]
+[node name="Camera2D" type="Camera2D" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport/World/EntityRoot/Player1" unique_id=213533081]
+
+[node name="Player2" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport/World/EntityRoot" unique_id=166518649 instance=ExtResource("3_r3nyt")]
 position = Vector2(82, 295)
 
-[node name="EffectRoot" type="Node2D" parent="World" unique_id=924942402]
+[node name="EffectRoot" type="Node2D" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport/World" unique_id=924942402]
 
-[node name="Camera2D" type="Camera2D" parent="World/EffectRoot" unique_id=1097927966]
-position = Vector2(321, 182)
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer" unique_id=1654223445]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer2" unique_id=1072526679]
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(518, 512)
+render_target_update_mode = 4
+script = ExtResource("3_m7syd")
+
+[node name="Camera2D" type="Camera2D" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer2/SubViewport" unique_id=282038727]
+position = Vector2(82, 295)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("6_wrvd8")
 
 [node name="HudLayer" type="CanvasLayer" parent="." unique_id=1331515537]
 process_mode = 1

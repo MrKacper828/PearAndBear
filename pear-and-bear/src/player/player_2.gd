@@ -47,4 +47,4 @@ func throw_rock() -> void:
 	var throw_power_x: float = 400.0 * facing_direction
 	var throw_power_y: float = -200.0
 	rock.velocity = Vector2(throw_power_x, throw_power_y)
-	get_tree().root.add_child(rock)
+	get_parent().add_child(rock)
