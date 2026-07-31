@@ -5,15 +5,15 @@ extends Area2D
 
 var current_player = null
 
-func _on_body_entered(body):
+func _on_body_entered(body) -> void:
 	if body.name == "Player1" or body.name == "Player2": 
 		current_player = body
 
-func _on_body_exited(body):
+func _on_body_exited(body: CharacterBody2D) -> void:
 	if body.name == "Player1" or body.name == "Player2": 
 		current_player = null
 
-func _process(delta):
+func _process(delta) -> void:
 	if current_player != null and (Input.is_action_just_pressed("interaction1") or Input.is_action_just_pressed("interaction2")):
 		var tween = get_tree().create_tween()
 		tween.tween_property(current_player, "global_position", top_position.global_position, 0.5)

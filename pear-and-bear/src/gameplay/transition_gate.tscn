@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dontth0g3ofei"]
+
+[ext_resource type="Script" uid="uid://bsjj1xeba8sld" path="res://src/resources/transition_gate.gd" id="1_e511h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dy88"]
+
+[node name="TransitionGate" type="Area2D" unique_id=1214074949]
+script = ExtResource("1_e511h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1069859968]
+shape = SubResource("RectangleShape2D_7dy88")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
