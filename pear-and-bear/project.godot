@@ -34,6 +34,10 @@ window/stretch/scale_mode="integer"
 
 project/assembly_name="PearAndBear"
 
+[global_group]
+
+Player=""
+
 [gui]
 
 theme/default_font_multichannel_signed_distance_field=true
