@@ -2,22 +2,20 @@ extends Area2D
 
 var number_of_players: int = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+signal gate_activated(next_level_scene: PackedScene)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if number_of_players == 2:
-		#animacja przejścia
-		#sygnał na zmianę poziomu
-		pass
-
+#pole na nowe strefy
+@export var next_level: PackedScene
 
 func _on_body_entered(body: Node2D) -> void:
-	number_of_players += 1
+	if body.is_in_group("Player"):
+		number_of_players += 1
+		
+		#wysłanie sygnału o zmianie poziomu na następny
+		if number_of_players == 2 and next_level != null:
+			gate_activated.emit(next_level)
 
 
 func _on_body_exited(body: Node2D) -> void:
-	number_of_players -= 1
+	if body.is_in_group("Player"):
+		number_of_players -= 1

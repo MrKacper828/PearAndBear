@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://df5mamr434xfc" path="res://src/gameplay/button.tscn" id="2_taal7"]
 [ext_resource type="PackedScene" uid="uid://cmhkiuq7nynit" path="res://src/gameplay/door.tscn" id="3_di3qs"]
 [ext_resource type="PackedScene" uid="uid://d2fgckti5mp10" path="res://src/gameplay/ladder.tscn" id="4_di3qs"]
+[ext_resource type="PackedScene" uid="uid://dontth0g3ofei" path="res://src/gameplay/transition_gate.tscn" id="5_ftf2l"]
+[ext_resource type="PackedScene" uid="uid://cpodfjyaqjc1i" path="res://src/scenes/level2.tscn" id="6_axuuy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xiven"]
 texture = ExtResource("1_xiven")
@@ -197,5 +199,9 @@ position = Vector2(26, 308)
 
 [node name="Player2Spawn" type="Marker2D" parent="." unique_id=811659341]
 position = Vector2(52, 307)
+
+[node name="TransitionGate" parent="." unique_id=1214074949 instance=ExtResource("5_ftf2l")]
+position = Vector2(480, 306)
+next_level = ExtResource("6_axuuy")
 
 [connection signal="button_pressed" from="button" to="door" method="_on_button_button_pressed"]

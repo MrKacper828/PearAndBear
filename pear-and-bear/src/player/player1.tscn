@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dy88"]
 size = Vector2(22, 22)
 
-[node name="Player1" type="CharacterBody2D" unique_id=561088767]
+[node name="Player1" type="CharacterBody2D" unique_id=561088767 groups=["Player"]]
 collision_layer = 2
 collision_mask = 15
 script = ExtResource("1_qmwfg")
