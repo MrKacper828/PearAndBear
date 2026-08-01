@@ -57,12 +57,12 @@ process_mode = 1
 [node name="EntityRoot" type="Node2D" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport/World" unique_id=238357778]
 
 [node name="Player1" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport/World/EntityRoot" unique_id=561088767 instance=ExtResource("1_wwqub")]
-position = Vector2(22, 295)
+position = Vector2(31, 266)
 
 [node name="Camera2D" type="Camera2D" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport/World/EntityRoot/Player1" unique_id=213533081]
 
 [node name="Player2" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport/World/EntityRoot" unique_id=166518649 instance=ExtResource("3_r3nyt")]
-position = Vector2(82, 295)
+position = Vector2(31, 198)
 
 [node name="EffectRoot" type="Node2D" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport/World" unique_id=924942402]
 

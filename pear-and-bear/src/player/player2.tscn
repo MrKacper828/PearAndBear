@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cug2wfloympf8"]
 
 [ext_resource type="Script" uid="uid://cb2l6bkc8lw85" path="res://src/player/player_2.gd" id="1_bdfj7"]
-[ext_resource type="Texture2D" uid="uid://blgouykjf34ir" path="res://assets/art/characters/icon.svg" id="2_4hxdf"]
+[ext_resource type="Texture2D" uid="uid://c5lsy12h23qur" path="res://assets/art/hero/P&B_sprite.png" id="2_j08y2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dy88"]
-size = Vector2(24, 24)
+size = Vector2(59, 63)
 
 [node name="Player2" type="CharacterBody2D" unique_id=166518649]
 collision_layer = 2
@@ -13,8 +13,8 @@ script = ExtResource("1_bdfj7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1344673920]
 texture_filter = 1
-scale = Vector2(0.22, 0.22)
-texture = ExtResource("2_4hxdf")
+texture = ExtResource("2_j08y2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1475800869]
+position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_7dy88")

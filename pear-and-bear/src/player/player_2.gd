@@ -33,8 +33,10 @@ func _physics_process(delta: float) -> void:
 func _process(delta: float) -> void:
 	if velocity.x > 0:
 		facing_direction = 1.0
+		$Sprite2D.flip_h = false
 	elif velocity.x < 0:
 		facing_direction = -1.0
+		$Sprite2D.flip_h = true
 		
 	if Input.is_action_just_pressed("ability2"):
 		throw_rock()
