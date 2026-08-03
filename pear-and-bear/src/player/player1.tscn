@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://bi6a28f6745j8" path="res://src/player/player_1.gd" id="1_qmwfg"]
 [ext_resource type="Texture2D" uid="uid://c5lsy12h23qur" path="res://assets/art/hero/P&B_sprite.png" id="2_wp8sl"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dy88"]
-size = Vector2(59, 63)
+[sub_resource type="CircleShape2D" id="CircleShape2D_ofk3o"]
+radius = 28.071337
 
 [node name="Player1" type="CharacterBody2D" unique_id=561088767 groups=["Player"]]
 collision_layer = 2
-collision_mask = 15
+collision_mask = 7
 script = ExtResource("1_qmwfg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2038376730]
@@ -17,5 +17,5 @@ position = Vector2(-3.8146973e-06, 3.8146973e-06)
 texture = ExtResource("2_wp8sl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1694392725]
-position = Vector2(-0.5, 0.5)
-shape = SubResource("RectangleShape2D_7dy88")
+position = Vector2(-3, 4)
+shape = SubResource("CircleShape2D_ofk3o")

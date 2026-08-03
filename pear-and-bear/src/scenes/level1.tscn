@@ -180,13 +180,13 @@ tile_map_data = PackedByteArray("AAAAABQAAAAAAAAAAAABABQAAAAAAAAAAAACABQAAAAAAAA
 tile_set = SubResource("TileSet_scns0")
 
 [node name="button" parent="." unique_id=1918958502 instance=ExtResource("2_taal7")]
-position = Vector2(211, 277)
+position = Vector2(224, 264)
 
 [node name="door" parent="." unique_id=482970322 instance=ExtResource("3_di3qs")]
 position = Vector2(433, 279)
 
 [node name="ladder" parent="." unique_id=923826196 instance=ExtResource("4_di3qs")]
-position = Vector2(151, 244)
+position = Vector2(162, 163)
 
 [node name="world floor" type="StaticBody2D" parent="." unique_id=811296970]
 
@@ -195,10 +195,10 @@ position = Vector2(237, 422)
 shape = SubResource("WorldBoundaryShape2D_scns0")
 
 [node name="Player1Spawn" type="Marker2D" parent="." unique_id=1423032484]
-position = Vector2(26, 308)
+position = Vector2(22, 301)
 
 [node name="Player2Spawn" type="Marker2D" parent="." unique_id=811659341]
-position = Vector2(52, 307)
+position = Vector2(87, 305)
 
 [node name="TransitionGate" parent="." unique_id=1214074949 instance=ExtResource("5_ftf2l")]
 position = Vector2(480, 306)

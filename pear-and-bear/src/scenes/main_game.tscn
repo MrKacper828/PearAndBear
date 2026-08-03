@@ -57,12 +57,12 @@ process_mode = 1
 [node name="EntityRoot" type="Node2D" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport/World" unique_id=238357778]
 
 [node name="Player1" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport/World/EntityRoot" unique_id=561088767 instance=ExtResource("1_wwqub")]
-position = Vector2(31, 266)
+position = Vector2(26, 286)
 
 [node name="Camera2D" type="Camera2D" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport/World/EntityRoot/Player1" unique_id=213533081]
 
 [node name="Player2" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport/World/EntityRoot" unique_id=166518649 instance=ExtResource("3_r3nyt")]
-position = Vector2(31, 198)
+position = Vector2(90, 288)
 
 [node name="EffectRoot" type="Node2D" parent="SplitPlayerCamera/CanvasLayer/HBoxContainer/SubViewportContainer/SubViewport/World" unique_id=924942402]
 
@@ -125,8 +125,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 597.0
-offset_bottom = 322.0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 599.0
+offset_bottom = 323.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
