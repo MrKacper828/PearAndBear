@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biivsh4uy7nn5"
-path="res://.godot/imported/BlueButton.png-fbd7cea9e89006dde6c89f4bf1a923e5.ctex"
+uid="uid://bne0ecpkwj0vy"
+path="res://.godot/imported/next_zone.png-f67dd3342e0ed48ae7f92d27187cf962.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/world/BlueButton.png"
-dest_files=["res://.godot/imported/BlueButton.png-fbd7cea9e89006dde6c89f4bf1a923e5.ctex"]
+source_file="res://assets/art/world/next_zone.png"
+dest_files=["res://.godot/imported/next_zone.png-f67dd3342e0ed48ae7f92d27187cf962.ctex"]
 
 [params]
 

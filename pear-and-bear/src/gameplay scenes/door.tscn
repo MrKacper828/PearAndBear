@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cmhkiuq7nynit"]
+
+[ext_resource type="Script" uid="uid://dyxl4g3126mfa" path="res://src/gameplay scripts/door.gd" id="1_vklnv"]
+[ext_resource type="Texture2D" uid="uid://djl4dfylrbufc" path="res://assets/art/world/red_door.png" id="2_vklnv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dy88"]
+size = Vector2(14, 64)
+
+[node name="door" type="StaticBody2D" unique_id=482970322]
+texture_filter = 1
+script = ExtResource("1_vklnv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=146105025]
+texture = ExtResource("2_vklnv")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1156045429]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_7dy88")

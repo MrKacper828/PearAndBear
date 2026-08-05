@@ -10,7 +10,7 @@ func _on_body_entered(body) -> void:
 		if not players_in_area.has(body):
 			players_in_area.append(body)
 
-func _on_body_exited(body: CharacterBody2D) -> void:
+func _on_body_exited(body) -> void:
 	if players_in_area.has(body):
 		players_in_area.erase(body)
 

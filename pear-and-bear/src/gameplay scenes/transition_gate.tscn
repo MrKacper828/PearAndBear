@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dontth0g3ofei"]
+
+[ext_resource type="Script" uid="uid://bsjj1xeba8sld" path="res://src/gameplay scripts/transition_gate.gd" id="1_4gvvr"]
+[ext_resource type="Texture2D" uid="uid://qld7pbkshhh0" path="res://assets/art/world/drabina nowa.png" id="2_sloct"]
+[ext_resource type="Texture2D" uid="uid://bne0ecpkwj0vy" path="res://assets/art/world/next_zone.png" id="3_ltw25"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dy88"]
+size = Vector2(125, 64)
+
+[node name="TransitionGate" type="Area2D" unique_id=1214074949]
+collision_mask = 2
+script = ExtResource("1_4gvvr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1069859968]
+position = Vector2(-0.5, 2)
+shape = SubResource("RectangleShape2D_7dy88")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=56222688]
+position = Vector2(31, 2)
+texture = ExtResource("2_sloct")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=558653067]
+position = Vector2(-32, 6)
+texture = ExtResource("3_ltw25")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1005277112]
+position = Vector2(32, 6)
+texture = ExtResource("3_ltw25")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

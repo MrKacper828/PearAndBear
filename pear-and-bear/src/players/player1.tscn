@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://02ehlc3tjl4o"]
 
-[ext_resource type="Script" uid="uid://bi6a28f6745j8" path="res://src/player/player_1.gd" id="1_qmwfg"]
-[ext_resource type="Texture2D" uid="uid://c5lsy12h23qur" path="res://assets/art/hero/P&B_sprite.png" id="2_wp8sl"]
+[ext_resource type="Script" uid="uid://bi6a28f6745j8" path="res://src/players/player_1.gd" id="1_qmwfg"]
+[ext_resource type="Texture2D" uid="uid://c5lsy12h23qur" path="res://assets/art/players/P&B_sprite.png" id="2_wp8sl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ofk3o"]
-radius = 28.071337
+radius = 27.0
 
 [node name="Player1" type="CharacterBody2D" unique_id=561088767 groups=["Player"]]
 collision_layer = 2

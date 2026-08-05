@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cl0rxhdhh54iy"]
 
-[ext_resource type="Script" uid="uid://tj3iyr60tkj8" path="res://src/core/main_game.gd" id="1_c5f53"]
-[ext_resource type="PackedScene" uid="uid://c7voinrbyg0af" path="res://src/scenes/level1.tscn" id="1_lt075"]
-[ext_resource type="PackedScene" uid="uid://02ehlc3tjl4o" path="res://src/player/player1.tscn" id="1_wwqub"]
-[ext_resource type="Script" uid="uid://bn8765wvt1sx4" path="res://src/core/level_manager.gd" id="2_1he1f"]
-[ext_resource type="Script" uid="uid://bl4uciqn62mx0" path="res://src/core/player2camera.gd" id="3_m7syd"]
-[ext_resource type="PackedScene" uid="uid://cug2wfloympf8" path="res://src/player/player2.tscn" id="3_r3nyt"]
-[ext_resource type="Script" uid="uid://61myh34jyr17" path="res://src/player/camera_2nd_player.gd" id="6_wrvd8"]
+[ext_resource type="Script" uid="uid://tj3iyr60tkj8" path="res://src/core logic/main_game.gd" id="1_c5f53"]
+[ext_resource type="PackedScene" uid="uid://c7voinrbyg0af" path="res://src/areas scenes/level1.tscn" id="1_lt075"]
+[ext_resource type="PackedScene" uid="uid://02ehlc3tjl4o" path="res://src/players/player1.tscn" id="1_wwqub"]
+[ext_resource type="Script" uid="uid://bn8765wvt1sx4" path="res://src/core logic/level_manager.gd" id="2_1he1f"]
+[ext_resource type="Script" uid="uid://bl4uciqn62mx0" path="res://src/ui/player2camera.gd" id="3_m7syd"]
+[ext_resource type="PackedScene" uid="uid://cug2wfloympf8" path="res://src/players/player2.tscn" id="3_r3nyt"]
+[ext_resource type="Script" uid="uid://61myh34jyr17" path="res://src/ui/camera_2nd_player.gd" id="6_wrvd8"]
 
 [node name="MainGame" type="Node" unique_id=1665275105]
 process_mode = 3
