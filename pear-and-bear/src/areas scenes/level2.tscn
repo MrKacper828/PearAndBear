@@ -1,6 +1,8 @@
 [gd_scene format=4 uid="uid://cpodfjyaqjc1i"]
 
 [ext_resource type="Texture2D" uid="uid://xujp37xcp1s8" path="res://assets/art/world/world_tileset.png" id="1_5mybw"]
+[ext_resource type="PackedScene" uid="uid://dontth0g3ofei" path="res://src/gameplay scenes/transition_gate.tscn" id="2_56bke"]
+[ext_resource type="PackedScene" uid="uid://cw8gsdmphw2ut" path="res://src/areas scenes/level3.tscn" id="3_82vtw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tdvmc"]
 texture = ExtResource("1_5mybw")
@@ -171,7 +173,7 @@ sources/0 = SubResource("TileSetAtlasSource_tdvmc")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7dy88"]
 
 [node name="TileMapLayer" type="TileMapLayer" unique_id=678565702]
-tile_map_data = PackedByteArray("AAAAAAQAAAAEAAAAAAABAAQAAAAEAAAAAAACAAQAAAAEAAAAAAADAAQAAAAEAAAAAAAEAAQAAAAEAAAAAAAFAAQAAAAEAAAAAAAGAAQAAAAJAAAAAAAHAAQAAAAKAAAAAAAIAAQAAAAKAAAAAAAJAAQAAAAKAAAAAAAKAAQAAAALAAAAAAALAAQAAAAEAAEAAAAMAAMAAAAEAAEAAAAMAAQAAAAEAAEAAAANAAQAAAAEAAEAAAANAAMAAAAEAAEAAAAOAAQAAAAEAAEAAAAOAAMAAAAEAAEAAAAPAAMAAAAEAAEAAAAPAAQAAAAEAAEAAAAAAAMAAAAIAAQAAAA=")
+tile_map_data = PackedByteArray("AAAAAAQAAAAEAAAAAAABAAQAAAAEAAAAAAACAAQAAAAEAAAAAAADAAQAAAAEAAAAAAAEAAQAAAAEAAAAAAAFAAQAAAAEAAAAAAAGAAQAAAAJAAAAAAAHAAQAAAAKAAAAAAAIAAQAAAAKAAAAAAAJAAQAAAAKAAAAAAAKAAQAAAALAAAAAAALAAQAAAAEAAEAAAAMAAMAAAAEAAEAAAAMAAQAAAAEAAEAAAANAAQAAAAEAAEAAAANAAMAAAAEAAEAAAAOAAQAAAAEAAEAAAAOAAMAAAAEAAEAAAAPAAMAAAAEAAEAAAAPAAQAAAAEAAEAAAAAAAMAAAAIAAQAAAAQAAMAAAAFAAEAAAARAAMAAAAFAAEAAAASAAMAAAAFAAEAAAATAAMAAAAFAAEAAAAUAAMAAAAFAAEAAAAVAAMAAAAFAAEAAAAWAAMAAAAFAAEAAAA=")
 tile_set = SubResource("TileSet_di3qs")
 
 [node name="Player1Spawn" type="Marker2D" parent="." unique_id=1255098070]
@@ -185,3 +187,7 @@ position = Vector2(61, 49)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="world floor" unique_id=1162100575]
 position = Vector2(93, 128)
 shape = SubResource("WorldBoundaryShape2D_7dy88")
+
+[node name="TransitionGate" parent="." unique_id=1214074949 instance=ExtResource("2_56bke")]
+position = Vector2(304, 11)
+next_level = ExtResource("3_82vtw")

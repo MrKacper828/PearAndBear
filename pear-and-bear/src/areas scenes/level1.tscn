@@ -186,7 +186,7 @@ position = Vector2(240, 258)
 position = Vector2(359, 288)
 
 [node name="ladder" parent="." unique_id=923826196 instance=ExtResource("4_xoxnp")]
-position = Vector2(162, 163)
+position = Vector2(159, 172)
 
 [node name="world floor" type="StaticBody2D" parent="." unique_id=811296970]
 

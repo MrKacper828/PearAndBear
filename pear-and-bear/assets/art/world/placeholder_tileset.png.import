@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qld7pbkshhh0"
-path="res://.godot/imported/drabina nowa.png-af6ca4f35b5d746c9b1a26d10d246c0f.ctex"
+uid="uid://c11pvcw2cs85j"
+path="res://.godot/imported/placeholder_tileset.png-d1f1b8cdad7eb3a55131f013c9eefc2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/world/drabina nowa.png"
-dest_files=["res://.godot/imported/drabina nowa.png-af6ca4f35b5d746c9b1a26d10d246c0f.ctex"]
+source_file="res://assets/art/world/placeholder_tileset.png"
+dest_files=["res://.godot/imported/placeholder_tileset.png-d1f1b8cdad7eb3a55131f013c9eefc2e.ctex"]
 
 [params]
 

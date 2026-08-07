@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://d2fgckti5mp10"]
 
 [ext_resource type="Script" uid="uid://cobgc6bvamsjk" path="res://src/gameplay scripts/ladder.gd" id="1_8gsq2"]
-[ext_resource type="Texture2D" uid="uid://qld7pbkshhh0" path="res://assets/art/world/drabina nowa.png" id="2_o2dff"]
+[ext_resource type="Texture2D" uid="uid://b7lnylu48fnfi" path="res://assets/art/world/drabina_nowa.png" id="2_8gsq2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dy88"]
-size = Vector2(200.00002, 833.3334)
+size = Vector2(173.33333, 770)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_scns0"]
-size = Vector2(66.666664, 6.666668)
+size = Vector2(58, 3.333334)
 
 [node name="ladder" type="Area2D" unique_id=923826196]
 collision_layer = 8
@@ -15,34 +15,34 @@ collision_mask = 3
 script = ExtResource("1_8gsq2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=825945885]
-position = Vector2(0, -96.66666)
-texture = ExtResource("2_o2dff")
+position = Vector2(0, -87)
+texture = ExtResource("2_8gsq2")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=526464192]
-position = Vector2(0, -33.333332)
-texture = ExtResource("2_o2dff")
+position = Vector2(0, -29)
+texture = ExtResource("2_8gsq2")
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1113901264]
-position = Vector2(0, 29.999998)
-texture = ExtResource("2_o2dff")
+position = Vector2(0, 29)
+texture = ExtResource("2_8gsq2")
 
 [node name="Sprite2D4" type="Sprite2D" parent="." unique_id=63207759]
-position = Vector2(0, 93.33333)
-texture = ExtResource("2_o2dff")
+position = Vector2(0, 87)
+texture = ExtResource("2_8gsq2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1732601144]
-position = Vector2(7.947286e-07, -1.6666604)
+position = Vector2(7.1525574e-07, 0.5000037)
 scale = Vector2(0.3, 0.3)
 shape = SubResource("RectangleShape2D_7dy88")
 
 [node name="top" type="Marker2D" parent="." unique_id=1517279061]
-position = Vector2(0, -176.66666)
+position = Vector2(0, -156)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1269325360]
-position = Vector2(0, -133.33333)
+position = Vector2(0, -117)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=634539257]
-position = Vector2(0, 9.333328)
+position = Vector2(0, 1.6666641)
 shape = SubResource("RectangleShape2D_scns0")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
