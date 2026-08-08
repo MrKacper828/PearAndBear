@@ -1,23 +1,19 @@
 [gd_scene format=3 uid="uid://dontth0g3ofei"]
 
 [ext_resource type="Script" uid="uid://bsjj1xeba8sld" path="res://src/gameplay scripts/transition_gate.gd" id="1_4gvvr"]
-[ext_resource type="Texture2D" uid="uid://b7lnylu48fnfi" path="res://assets/art/world/drabina_nowa.png" id="2_sloct"]
 [ext_resource type="Texture2D" uid="uid://bne0ecpkwj0vy" path="res://assets/art/world/next_zone.png" id="3_ltw25"]
+[ext_resource type="Texture2D" uid="uid://dxn0q5yjhlprv" path="res://assets/art/world/chain.png" id="3_sloct"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dy88"]
-size = Vector2(62, 39)
+size = Vector2(54, 39)
 
 [node name="TransitionGate" type="Area2D" unique_id=1214074949]
 collision_mask = 2
 script = ExtResource("1_4gvvr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1069859968]
-position = Vector2(-2, 9.5)
+position = Vector2(0, 9.5)
 shape = SubResource("RectangleShape2D_7dy88")
-
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=56222688]
-position = Vector2(36, 6)
-texture = ExtResource("2_sloct")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=558653067]
 z_index = 1
@@ -28,6 +24,22 @@ texture = ExtResource("3_ltw25")
 z_index = 1
 position = Vector2(32, 6)
 texture = ExtResource("3_ltw25")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1211703550]
+position = Vector2(-61, -5)
+texture = ExtResource("3_sloct")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1253493029]
+position = Vector2(-61, -35)
+texture = ExtResource("3_sloct")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1757642978]
+position = Vector2(61, -5)
+texture = ExtResource("3_sloct")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=841894218]
+position = Vector2(61, -35)
+texture = ExtResource("3_sloct")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
