@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ofk3o"]
 radius = 27.0
 
-[sub_resource type="Animation" id="Animation_47goe"]
+[sub_resource type="Animation" id="Animation_5me1s"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -21,9 +21,8 @@ tracks/0/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_t3ong"]
+[sub_resource type="Animation" id="Animation_47goe"]
 resource_name = "walk"
-length = 0.6
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -32,16 +31,16 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.39999998),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2]
+"values": [0, 1, 2, 3, 4]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_sx0ru"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t3ong"]
 _data = {
-&"RESET": SubResource("Animation_47goe"),
-&"walk": SubResource("Animation_t3ong")
+&"RESET": SubResource("Animation_5me1s"),
+&"walk": SubResource("Animation_47goe")
 }
 
 [node name="Player1" type="CharacterBody2D" unique_id=561088767 groups=["Player"]]
@@ -53,11 +52,11 @@ script = ExtResource("1_qmwfg")
 texture_filter = 1
 position = Vector2(-3.8146973e-06, 3.8146973e-06)
 texture = ExtResource("2_5me1s")
-hframes = 3
+hframes = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1694392725]
 position = Vector2(-3, 4)
 shape = SubResource("CircleShape2D_ofk3o")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=872022508]
-libraries/ = SubResource("AnimationLibrary_sx0ru")
+libraries/ = SubResource("AnimationLibrary_t3ong")
