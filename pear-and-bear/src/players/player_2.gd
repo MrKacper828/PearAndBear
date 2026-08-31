@@ -25,10 +25,14 @@ func _physics_process(delta: float) -> void:
 		coyote_timer = 0.0
 	
 	var direction := Input.get_axis("move_left2", "move_right2")
+	
 	if direction:
 		velocity.x = direction * SPEED
+		$AnimationPlayer.play("walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		$AnimationPlayer.stop()
+		$Sprite2D.frame = 5
 
 	move_and_slide()
 

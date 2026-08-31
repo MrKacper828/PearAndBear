@@ -1,10 +1,48 @@
 [gd_scene format=3 uid="uid://cug2wfloympf8"]
 
 [ext_resource type="Script" uid="uid://cb2l6bkc8lw85" path="res://src/players/player_2.gd" id="1_bdfj7"]
-[ext_resource type="Texture2D" uid="uid://c5lsy12h23qur" path="res://assets/art/players/P&B_sprite.png" id="2_j08y2"]
+[ext_resource type="Texture2D" uid="uid://ekqo8wxwqgao" path="res://assets/art/players/sprite_walk2.png" id="2_v6a8l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wp8sl"]
 radius = 27.0
+
+[sub_resource type="Animation" id="Animation_eojum"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_1pnqj"]
+resource_name = "walk"
+length = 0.75
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qahy6"]
+_data = {
+&"RESET": SubResource("Animation_eojum"),
+&"walk": SubResource("Animation_1pnqj")
+}
 
 [node name="Player2" type="CharacterBody2D" unique_id=166518649 groups=["Player"]]
 collision_layer = 2
@@ -13,8 +51,12 @@ script = ExtResource("1_bdfj7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1344673920]
 texture_filter = 1
-texture = ExtResource("2_j08y2")
+texture = ExtResource("2_v6a8l")
+hframes = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1475800869]
 position = Vector2(-3, 4)
 shape = SubResource("CircleShape2D_wp8sl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=187805406]
+libraries/ = SubResource("AnimationLibrary_qahy6")
