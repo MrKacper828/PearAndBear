@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d2fgckti5mp10" path="res://src/gameplay scenes/ladder.tscn" id="4_xoxnp"]
 [ext_resource type="PackedScene" uid="uid://dontth0g3ofei" path="res://src/gameplay scenes/transition_gate.tscn" id="5_pe0lh"]
 [ext_resource type="PackedScene" uid="uid://cpodfjyaqjc1i" path="res://src/areas scenes/level2.tscn" id="6_acwps"]
+[ext_resource type="PackedScene" uid="uid://cw332pyss2j4t" path="res://src/gameplay scenes/rock_button.tscn" id="7_w462w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xiven"]
 texture = ExtResource("1_kyk72")
@@ -185,6 +186,9 @@ position = Vector2(240, 258)
 [node name="door" parent="." unique_id=482970322 instance=ExtResource("3_itmdl")]
 position = Vector2(359, 288)
 
+[node name="door2" parent="." unique_id=1620577185 instance=ExtResource("3_itmdl")]
+position = Vector2(341, 163)
+
 [node name="ladder" parent="." unique_id=923826196 instance=ExtResource("4_xoxnp")]
 position = Vector2(159, 172)
 
@@ -204,4 +208,8 @@ position = Vector2(87, 305)
 position = Vector2(497, 282)
 next_level = ExtResource("6_acwps")
 
+[node name="rock_button" parent="." unique_id=964702281 instance=ExtResource("7_w462w")]
+position = Vector2(273, 194)
+
 [connection signal="button_pressed" from="button" to="door" method="_on_button_button_pressed"]
+[connection signal="button_pressed" from="rock_button" to="door2" method="_on_rock_button_button_pressed"]

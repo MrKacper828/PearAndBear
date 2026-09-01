@@ -37,6 +37,7 @@ project/assembly_name="PearAndBear"
 [global_group]
 
 Player=""
+normal_rock=""
 
 [gui]
 

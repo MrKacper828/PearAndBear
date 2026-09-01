@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bji2m775iag2j"]
 
-[ext_resource type="Script" uid="uid://xipom35xk6a3" path="res://src/players/rock.gd" id="1_3uxyb"]
+[ext_resource type="Script" uid="uid://dpt4tojfw5w0y" path="res://src/players/fire_rock.gd" id="1_3uxyb"]
 [ext_resource type="Texture2D" uid="uid://cf8l3wsnxknsf" path="res://assets/art/players/throwing_fire_rock.png" id="2_3uxyb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7dy88"]
 radius = 3.0
 height = 8.0
 
-[node name="rock" type="Area2D" unique_id=1768890346]
+[node name="fire_rock" type="Area2D" unique_id=1768890346]
 scale = Vector2(1.2, 1.2)
 collision_mask = 5
 script = ExtResource("1_3uxyb")
