@@ -38,6 +38,7 @@ project/assembly_name="PearAndBear"
 
 Player=""
 normal_rock=""
+fire_rock=""
 
 [gui]
 

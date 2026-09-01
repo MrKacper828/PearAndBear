@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dontth0g3ofei" path="res://src/gameplay scenes/transition_gate.tscn" id="5_pe0lh"]
 [ext_resource type="PackedScene" uid="uid://cpodfjyaqjc1i" path="res://src/areas scenes/level2.tscn" id="6_acwps"]
 [ext_resource type="PackedScene" uid="uid://cw332pyss2j4t" path="res://src/gameplay scenes/rock_button.tscn" id="7_w462w"]
+[ext_resource type="PackedScene" uid="uid://c2bg02u75wv4v" path="res://src/gameplay scenes/rope_ladder.tscn" id="8_itmdl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xiven"]
 texture = ExtResource("1_kyk72")
@@ -177,7 +178,7 @@ sources/0 = SubResource("TileSetAtlasSource_xiven")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_scns0"]
 
 [node name="level1" type="TileMapLayer" unique_id=606240797]
-tile_map_data = PackedByteArray("AAAAABQAAAAAAAAAAAABABQAAAAAAAAAAAACABQAAAAAAAAAAAADABQAAAAAAAAAAAAEABQAAAAAAAAAAAAFABQAAAAAAAAAAAAGABQAAAAAAAAAAAAIABIAAAAAAAAAAAAJABIAAAAAAAAAAAAKABIAAAAAAAAAAAALABIAAAAAAAAAAAAMABIAAAAAAAAAAAANABIAAAAAAAAAAAAOABIAAAAAAAAAAAATABQAAAAAAAAAAAAUABQAAAAAAAAAAAAVABQAAAAAAAAAAAAWABQAAAAAAAAAAAAXABQAAAAJAAAAAAAYABQAAAAKAAAAAAAZABQAAAAKAAAAAAAaABQAAAALAAAAAAAbABQAAAACAAEAAAAcABQAAAACAAEAAAAdABQAAAACAAEAAAAeABQAAAACAAEAAAAAABMAAAAIAAMAAAAfABQAAAACAAEAAAAgABQAAAACAAEAAAAhABQAAAACAAEAAAAiABQAAAACAAEAAAAjABQAAAACAAEAAAAkABQAAAACAAEAAAAlABQAAAACAAEAAAAmABQAAAACAAEAAAAnABQAAAACAAEAAAAPABIAAAAAAAAAAAAQABIAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAABQAAAAAAAAAAAABABQAAAAAAAAAAAACABQAAAAAAAAAAAADABQAAAAAAAAAAAAEABQAAAAAAAAAAAAFABQAAAAAAAAAAAAGABQAAAAAAAAAAAAIABIAAAAAAAAAAAAJABIAAAAAAAAAAAAKABIAAAAAAAAAAAALABIAAAAAAAAAAAAMABIAAAAAAAAAAAANABIAAAAAAAAAAAAOABIAAAAAAAAAAAATABQAAAAAAAAAAAAUABQAAAAAAAAAAAAVABQAAAAAAAAAAAAWABQAAAAAAAAAAAAXABQAAAAJAAAAAAAYABQAAAAKAAAAAAAZABQAAAAKAAAAAAAaABQAAAALAAAAAAAbABQAAAACAAEAAAAcABQAAAACAAEAAAAdABQAAAACAAEAAAAeABQAAAACAAEAAAAAABMAAAAIAAMAAAAfABQAAAACAAEAAAAgABQAAAACAAEAAAAhABQAAAACAAEAAAAiABQAAAACAAEAAAAjABQAAAACAAEAAAAkABQAAAACAAEAAAAlABQAAAACAAEAAAAmABQAAAACAAEAAAAnABQAAAACAAEAAAAPABIAAAAAAAAAAAAQABIAAAAAAAAAAAD8/xoAAAAAAAAAAAD9/xoAAAAAAAAAAAD+/xoAAAAAAAAAAAD//xoAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_scns0")
 
 [node name="button" parent="." unique_id=1918958502 instance=ExtResource("2_w462w")]
@@ -193,6 +194,7 @@ position = Vector2(341, 163)
 position = Vector2(159, 172)
 
 [node name="world floor" type="StaticBody2D" parent="." unique_id=811296970]
+position = Vector2(0, 12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="world floor" unique_id=329953816]
 position = Vector2(237, 422)
@@ -210,6 +212,9 @@ next_level = ExtResource("6_acwps")
 
 [node name="rock_button" parent="." unique_id=964702281 instance=ExtResource("7_w462w")]
 position = Vector2(273, 194)
+
+[node name="RopeLadder" parent="." unique_id=368789566 instance=ExtResource("8_itmdl")]
+position = Vector2(-41, 245)
 
 [connection signal="button_pressed" from="button" to="door" method="_on_button_button_pressed"]
 [connection signal="button_pressed" from="rock_button" to="door2" method="_on_rock_button_button_pressed"]
