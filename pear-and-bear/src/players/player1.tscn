@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://02ehlc3tjl4o"]
 
 [ext_resource type="Script" uid="uid://bi6a28f6745j8" path="res://src/players/player_1.gd" id="1_qmwfg"]
-[ext_resource type="Texture2D" uid="uid://0q3tstifyi5t" path="res://assets/art/players/sprite_walk.png" id="2_5me1s"]
+[ext_resource type="Texture2D" uid="uid://bn7rqkpsann7x" path="res://assets/art/players/sprite_pear.png" id="2_5me1s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ofk3o"]
 radius = 27.0
@@ -19,6 +19,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_t3ong"]
+resource_name = "nothing"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9]
 }
 
 [sub_resource type="Animation" id="Animation_47goe"]
@@ -41,6 +56,7 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t3ong"]
 _data = {
 &"RESET": SubResource("Animation_5me1s"),
+&"nothing": SubResource("Animation_t3ong"),
 &"walk": SubResource("Animation_47goe")
 }
 
@@ -54,6 +70,7 @@ texture_filter = 1
 position = Vector2(-3.8146973e-06, 3.8146973e-06)
 texture = ExtResource("2_5me1s")
 hframes = 6
+vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1694392725]
 position = Vector2(-3, 4)
