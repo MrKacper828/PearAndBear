@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bi6a28f6745j8" path="res://src/players/player_1.gd" id="1_qmwfg"]
 [ext_resource type="Texture2D" uid="uid://0q3tstifyi5t" path="res://assets/art/players/sprite_walk.png" id="2_5me1s"]
+[ext_resource type="Script" uid="uid://p6j2pgalm6vh" path="res://src/players/rock_throw_ability.gd" id="3_t3ong"]
+[ext_resource type="PackedScene" uid="uid://cn2hv0wgnq4mj" path="res://src/players/rock.tscn" id="4_sx0ru"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ofk3o"]
 radius = 27.0
@@ -61,3 +63,8 @@ shape = SubResource("CircleShape2D_ofk3o")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=872022508]
 libraries/ = SubResource("AnimationLibrary_t3ong")
+speed_scale = 1.2
+
+[node name="CurrentAbility" type="Node" parent="." unique_id=717815022]
+script = ExtResource("3_t3ong")
+rock_scene = ExtResource("4_sx0ru")
