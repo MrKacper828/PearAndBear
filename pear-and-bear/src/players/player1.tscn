@@ -68,3 +68,9 @@ speed_scale = 1.2
 [node name="CurrentAbility" type="Node" parent="." unique_id=717815022]
 script = ExtResource("3_t3ong")
 rock_scene = ExtResource("4_sx0ru")
+max_power_x = 300.0
+max_power_y = -600.0
+
+[node name="Line2D" type="Line2D" parent="CurrentAbility" unique_id=510974179]
+width = 2.0
+default_color = Color(1, 1, 1, 0.47843137)
