@@ -9,3 +9,6 @@ func open() -> void:
 
 func _on_button_button_pressed() -> void:
 	open()
+
+func _on_rock_button_button_pressed() -> void:
+	open()

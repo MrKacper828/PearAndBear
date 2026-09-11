@@ -1,5 +1,7 @@
 extends Area2D
 
+var button_activated = preload("res://assets/art/world/red_button_activated.png");
+
 signal button_pressed 
 
 var current_player = null
@@ -17,7 +19,9 @@ func _process(delta) -> void:
 	if current_player != null and not is_pressed:
 		if current_player.name == "Player1" and Input.is_action_just_pressed("interaction1"):
 			is_pressed = true
+			$Sprite2D.texture = button_activated
 			button_pressed.emit()
 		elif current_player.name == "Player2" and Input.is_action_just_pressed("interaction2"):
 			is_pressed = true
+			$Sprite2D.texture = button_activated
 			button_pressed.emit()

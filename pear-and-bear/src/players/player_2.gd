@@ -2,9 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 150.0
-const JUMP_VELOCITY = -250.0
-
-const ROCK_SCENE = preload("res://src/players/fire_rock.tscn")
+const JUMP_VELOCITY = -270.0
 
 const COYOTE_TIME: float = 0.1
 var coyote_timer: float = 0.0
@@ -45,15 +43,5 @@ func _process(delta: float) -> void:
 		facing_direction = -1.0
 		$Sprite2D.flip_h = true
 		
-	if Input.is_action_just_pressed("ability2"):
-		throw_rock()
-
-#logika rzutu kamieniem		
-func throw_rock() -> void:
-	var rock = ROCK_SCENE.instantiate()
-	
-	rock.global_position = global_position
-	var throw_power_x: float = 300.0 * facing_direction
-	var throw_power_y: float = -500.0
-	rock.velocity = Vector2(throw_power_x, throw_power_y)
-	get_parent().add_child(rock)
+	if has_node("CurrentAbility"):
+		$CurrentAbility.execute(delta, facing_direction, ability_action)
