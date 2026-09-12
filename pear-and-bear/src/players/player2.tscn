@@ -23,22 +23,6 @@ tracks/0/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_qahy6"]
-resource_name = "nothing2"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [6, 7, 8, 9]
-}
-
 [sub_resource type="Animation" id="Animation_1pnqj"]
 resource_name = "walk"
 length = 0.75
@@ -59,7 +43,6 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qahy6"]
 _data = {
 &"RESET": SubResource("Animation_eojum"),
-&"nothing2": SubResource("Animation_qahy6"),
 &"walk": SubResource("Animation_1pnqj")
 }
 
@@ -72,7 +55,6 @@ script = ExtResource("1_bdfj7")
 texture_filter = 1
 texture = ExtResource("2_v6a8l")
 hframes = 6
-vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1475800869]
 position = Vector2(-3, 4)
