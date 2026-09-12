@@ -28,11 +28,15 @@ func _physics_process(delta: float) -> void:
 	
 	if direction:
 		velocity.x = direction * SPEED
-		$AnimationPlayer.play("walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		$AnimationPlayer.play("nothing2")
 
+	if not is_on_floor():
+		$AnimationPlayer.play("jump2")
+	elif direction != 0:
+		$AnimationPlayer.play("walk")
+	else:
+		$AnimationPlayer.play("nothing2")
 	move_and_slide()
 
 #funkcja zajmująca się ustaleniem kierunku gracza i wywołaniem rzutu
