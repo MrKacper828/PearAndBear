@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c2bg02u75wv4v"]
+
+[ext_resource type="Script" uid="uid://cobgc6bvamsjk" path="res://src/gameplay scripts/ladder.gd" id="1_gywrd"]
+[ext_resource type="Script" uid="uid://c40mrkyd54dy8" path="res://src/gameplay scripts/ladder_rope.gd" id="1_unbkr"]
+[ext_resource type="Texture2D" uid="uid://dywqb6nhpshhd" path="res://assets/art/world/rope.png" id="2_gywrd"]
+[ext_resource type="Texture2D" uid="uid://davyghuqiol1l" path="res://assets/art/world/rope_ladder_rolled.png" id="3_rb0yg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_scns0"]
+size = Vector2(25, 23.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dy88"]
+size = Vector2(35, 24.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3thdu"]
+size = Vector2(56, 1)
+
+[node name="RopeLadder" type="Area2D" unique_id=368789566]
+collision_layer = 8
+collision_mask = 3
+script = ExtResource("1_gywrd")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1783451721]
+position = Vector2(-16, -2)
+script = ExtResource("1_unbkr")
+
+[node name="Sprite2Drope" type="Sprite2D" parent="Area2D" unique_id=217775967]
+texture = ExtResource("2_gywrd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1020095302]
+position = Vector2(-10.5, 1.25)
+shape = SubResource("RectangleShape2D_scns0")
+
+[node name="Sprite2Dladder" type="Sprite2D" parent="." unique_id=2045954656]
+position = Vector2(0.5, 0.125)
+texture = ExtResource("3_rb0yg")
+
+[node name="CollisionShape2Dladder" type="CollisionShape2D" parent="." unique_id=332585054]
+shape = SubResource("RectangleShape2D_7dy88")
+
+[node name="top" type="Marker2D" parent="." unique_id=1151584859]
+position = Vector2(0, -34)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1609344312]
+position = Vector2(0, -13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1899540353]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_3thdu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
