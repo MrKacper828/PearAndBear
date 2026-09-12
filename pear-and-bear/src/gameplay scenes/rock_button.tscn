@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cw332pyss2j4t"]
+
+[ext_resource type="Script" uid="uid://4fp2u1bgbabs" path="res://src/gameplay scripts/rock_button.gd" id="1_a74dw"]
+[ext_resource type="Texture2D" uid="uid://dsip0g61gyn68" path="res://assets/art/world/green_rock_button.png" id="2_a74dw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ofdu0"]
+radius = 7.7999997
+
+[node name="rock_button" type="Area2D" unique_id=1918958502]
+collision_layer = 8
+collision_mask = 3
+script = ExtResource("1_a74dw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1766473576]
+texture = ExtResource("2_a74dw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1652786772]
+shape = SubResource("CircleShape2D_ofdu0")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
