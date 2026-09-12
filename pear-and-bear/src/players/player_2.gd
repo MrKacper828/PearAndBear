@@ -29,7 +29,8 @@ func _physics_process(delta: float) -> void:
 		$AnimationPlayer.play("walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		$AnimationPlayer.play("nothing2")
+		$AnimationPlayer.stop()
+		$Sprite2D.frame = 5
 
 	move_and_slide()
 
