@@ -16,35 +16,8 @@ strzałki Q
 
 jak cos to można zmienić w ustawieniach :)
 
-kamera na cała mape i chuj
+kamera na cała mape
 
 Postacie to kiwi (ptak), jak umierają to przecinają się jak kiwi (owoc)
 
 Fabuła to wpadają w dziure i musza się wydostać
-
-<br><br>
-
-
-
-
-
-OOOOO
-
-OOOOOO
-
-OOOOO
-
-OOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-
-OOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-
-OOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-
-OOOOO
-
-OOOOOO
-
-OOOOO
-
-
-(Tak to kutas)
