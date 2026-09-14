@@ -41,5 +41,21 @@ texture = ExtResource("3_sloct")
 position = Vector2(61, -35)
 texture = ExtResource("3_sloct")
 
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=1090345576]
+position = Vector2(61, -65)
+texture = ExtResource("3_sloct")
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=1900548264]
+position = Vector2(-61, -65)
+texture = ExtResource("3_sloct")
+
+[node name="Sprite2D10" type="Sprite2D" parent="." unique_id=87154813]
+position = Vector2(-61, -75)
+texture = ExtResource("3_sloct")
+
+[node name="Sprite2D11" type="Sprite2D" parent="." unique_id=452475842]
+position = Vector2(61, -75)
+texture = ExtResource("3_sloct")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

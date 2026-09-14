@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bi6a28f6745j8" path="res://src/players/player_1.gd" id="1_qmwfg"]
 [ext_resource type="Texture2D" uid="uid://bn7rqkpsann7x" path="res://assets/art/players/sprite_pear.png" id="2_5me1s"]
-
 [ext_resource type="Script" uid="uid://p6j2pgalm6vh" path="res://src/players/rock_throw_ability.gd" id="3_t3ong"]
 [ext_resource type="PackedScene" uid="uid://cn2hv0wgnq4mj" path="res://src/players/rock.tscn" id="4_sx0ru"]
 

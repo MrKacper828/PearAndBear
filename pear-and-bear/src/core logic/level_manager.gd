@@ -8,6 +8,17 @@ extends Node
 
 func _ready() -> void:
 	gate_current_level()
+	teleport_players_to_spawns()
+	
+func teleport_players_to_spawns(target_node: Node = null) -> void:
+	if target_node == null:
+		target_node = level_root
+	var spawn_p1 = level_root.find_child("Player1Spawn", true, false)
+	var spawn_p2 = level_root.find_child("Player2Spawn", true, false)
+	if spawn_p1:
+		player_1.global_position = spawn_p1.global_position
+	if spawn_p2:
+		player_2.global_position = spawn_p2.global_position
 	
 func gate_current_level() -> void:
 	#wywołanie funkcji po otrzymaniu sygnału
@@ -23,18 +34,13 @@ func if_gate_activated(next_level: PackedScene) -> void:
 	await tween_in.finished
 	
 	for child in level_root.get_children():
+		level_root.remove_child(child)
 		child.queue_free()
 		
 	var new_level = next_level.instantiate()
 	level_root.add_child(new_level)
 	
-	var spawn_p1 = new_level.find_child("Player1Spawn", true, false)
-	var spawn_p2 = new_level.find_child("Player2Spawn", true, false)
-	
-	if spawn_p1:
-		player_1.global_position = spawn_p1.global_position
-	if spawn_p2:
-		player_2.global_position = spawn_p2.global_position
+	teleport_players_to_spawns()
 		
 	call_deferred("gate_current_level")
 	

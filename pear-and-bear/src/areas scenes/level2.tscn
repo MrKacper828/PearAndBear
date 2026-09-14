@@ -171,21 +171,25 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_tdvmc")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7dy88"]
+distance = -1.0
 
 [node name="TileMapLayer" type="TileMapLayer" unique_id=678565702]
 tile_map_data = PackedByteArray("AAAAAAQAAAAEAAAAAAABAAQAAAAEAAAAAAACAAQAAAAEAAAAAAADAAQAAAAEAAAAAAAEAAQAAAAEAAAAAAAFAAQAAAAEAAAAAAAGAAQAAAAJAAAAAAAHAAQAAAAKAAAAAAAIAAQAAAAKAAAAAAAJAAQAAAAKAAAAAAAKAAQAAAALAAAAAAALAAQAAAAEAAEAAAAMAAMAAAAEAAEAAAAMAAQAAAAEAAEAAAANAAQAAAAEAAEAAAANAAMAAAAEAAEAAAAOAAQAAAAEAAEAAAAOAAMAAAAEAAEAAAAPAAMAAAAEAAEAAAAPAAQAAAAEAAEAAAAAAAMAAAAIAAQAAAAQAAMAAAAFAAEAAAARAAMAAAAFAAEAAAASAAMAAAAFAAEAAAATAAMAAAAFAAEAAAAUAAMAAAAFAAEAAAAVAAMAAAAFAAEAAAAWAAMAAAAFAAEAAAA=")
 tile_set = SubResource("TileSet_di3qs")
 
 [node name="Player1Spawn" type="Marker2D" parent="." unique_id=1255098070]
-position = Vector2(28, 48)
+position = Vector2(18, 27)
+gizmo_extents = 32.0
 
 [node name="Player2Spawn" type="Marker2D" parent="." unique_id=1990134146]
-position = Vector2(61, 49)
+position = Vector2(91, 28)
+gizmo_extents = 32.0
 
 [node name="world floor" type="StaticBody2D" parent="." unique_id=331265387]
+position = Vector2(119, 121)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="world floor" unique_id=1162100575]
-position = Vector2(93, 128)
+position = Vector2(1, 0)
 shape = SubResource("WorldBoundaryShape2D_7dy88")
 
 [node name="TransitionGate" parent="." unique_id=1214074949 instance=ExtResource("2_56bke")]
