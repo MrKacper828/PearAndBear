@@ -2,21 +2,25 @@
 
 Brak informacji o odległości od końca mapy - KINO!
 
-2 graczy
+2 graczy (co-op)
 
 brak online
 
 wspinanie się w góre - 2D 🔥🔥🔥
 
-postacie co jakąś odległość zmieniają umiejętności 
+co jakiś czas zmiana strefy wspinaczki w tym tekstur mapy
 
-wasd P
+postacie co strefę zmieniają umiejętności 
 
-strzałki Q
+współpraca i abilitki wymagane żeby przejść wyżej do następnych stref
+
+wasd q e
+
+strzałki ctrl shift
 
 jak cos to można zmienić w ustawieniach :)
 
-kamera na cała mape
+kamera na mapę lub split screen
 
 Postacie to kiwi (ptak), jak umierają to przecinają się jak kiwi (owoc)
 
