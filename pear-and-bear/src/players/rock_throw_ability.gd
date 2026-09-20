@@ -1,6 +1,7 @@
 extends Node
 
 @onready var line_2d: Line2D = $Line2D
+var aim_offset: Vector2 = Vector2.ZERO
 
 #zmienne dla każdego gracza w inspektorze
 @export var rock_scene: PackedScene
@@ -43,13 +44,18 @@ func throw_rock(held_time: float, facing_direction: float) -> void:
 	rock.velocity = Vector2(final_power_x, final_power_y)
 	get_parent().get_parent().add_child(rock)
 	
-#linia widoczności trajektorii rzuty
-func _process(_delta: float) -> void:
+#linia widoczności trajektorii rzutu + przesunięcie kamery w stronę rzutu
+func _process(delta: float) -> void:
 	if is_charging:
 		line_2d.visible = true
 		update_trajectory_line()
+		var current_power_x = remap(charge_time, 0.0, max_charge_time, min_power_x, max_power_x) * get_parent().facing_direction
+		var current_power_y = remap(charge_time, 0.0, max_charge_time, min_power_y, max_power_y)
+		var target_offset = Vector2(current_power_x * 0.25, current_power_y * 0.25)
+		aim_offset = aim_offset.lerp(target_offset, 10.0 * delta)
 	else:
 		line_2d.visible = false
+		aim_offset = aim_offset.lerp(Vector2.ZERO, 10.0 * delta)
 		
 func update_trajectory_line() -> void:
 	line_2d.clear_points()
@@ -70,3 +76,6 @@ func update_trajectory_line() -> void:
 		
 		sim_vel.y += gravity * step_dt
 		sim_pos += sim_vel * step_dt
+		
+func get_aim_offset() -> Vector2:
+	return aim_offset

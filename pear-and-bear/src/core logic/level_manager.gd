@@ -13,8 +13,8 @@ func _ready() -> void:
 func teleport_players_to_spawns(target_node: Node = null) -> void:
 	if target_node == null:
 		target_node = level_root
-	var spawn_p1 = level_root.find_child("Player1Spawn", true, false)
-	var spawn_p2 = level_root.find_child("Player2Spawn", true, false)
+	var spawn_p1 = target_node.find_child("Player1Spawn", true, false)
+	var spawn_p2 = target_node.find_child("Player2Spawn", true, false)
 	if spawn_p1:
 		player_1.global_position = spawn_p1.global_position
 	if spawn_p2:
@@ -40,7 +40,7 @@ func if_gate_activated(next_level: PackedScene) -> void:
 	var new_level = next_level.instantiate()
 	level_root.add_child(new_level)
 	
-	teleport_players_to_spawns()
+	teleport_players_to_spawns(new_level)
 		
 	call_deferred("gate_current_level")
 	

@@ -49,18 +49,6 @@ tile_set = SubResource("TileSet_7dy88")
 rendering_quadrant_size = 64
 physics_quadrant_size = 64
 
-[node name="button" parent="." unique_id=1918958502 instance=ExtResource("2_w462w")]
-position = Vector2(247, 221)
-
-[node name="door" parent="." unique_id=482970322 instance=ExtResource("3_itmdl")]
-position = Vector2(479, 287)
-
-[node name="door2" parent="." unique_id=1620577185 instance=ExtResource("3_itmdl")]
-position = Vector2(410, 31)
-
-[node name="ladder" parent="." unique_id=923826196 instance=ExtResource("4_xoxnp")]
-position = Vector2(149, 139)
-
 [node name="world floor" type="StaticBody2D" parent="." unique_id=811296970]
 position = Vector2(239, 701)
 
@@ -76,15 +64,27 @@ gizmo_extents = 32.0
 position = Vector2(14, 284)
 gizmo_extents = 32.0
 
-[node name="TransitionGate" parent="." unique_id=1214074949 instance=ExtResource("5_pe0lh")]
-position = Vector2(620, 282)
-next_level = ExtResource("6_acwps")
+[node name="button" parent="." unique_id=1918958502 instance=ExtResource("2_w462w")]
+position = Vector2(247, 221)
+
+[node name="door" parent="." unique_id=482970322 instance=ExtResource("3_itmdl")]
+position = Vector2(479, 287)
 
 [node name="rock_button" parent="." unique_id=964702281 instance=ExtResource("7_w462w")]
 position = Vector2(324, 111)
 
+[node name="door2" parent="." unique_id=1620577185 instance=ExtResource("3_itmdl")]
+position = Vector2(410, 31)
+
+[node name="ladder" parent="." unique_id=923826196 instance=ExtResource("4_xoxnp")]
+position = Vector2(149, 139)
+
 [node name="RopeLadder" parent="." unique_id=368789566 instance=ExtResource("8_itmdl")]
 position = Vector2(-311, 281)
+
+[node name="TransitionGate" parent="." unique_id=1214074949 instance=ExtResource("5_pe0lh")]
+position = Vector2(620, 282)
+next_level = ExtResource("6_acwps")
 
 [connection signal="button_pressed" from="button" to="door" method="_on_button_button_pressed"]
 [connection signal="button_pressed" from="rock_button" to="door2" method="_on_rock_button_button_pressed"]

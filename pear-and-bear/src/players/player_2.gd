@@ -48,3 +48,8 @@ func _process(delta: float) -> void:
 		
 	if has_node("CurrentAbility"):
 		$CurrentAbility.execute(delta, facing_direction, ability_action)
+
+func get_camera_offset() -> Vector2:
+	if has_node("CurrentAbility") and $CurrentAbility.has_method("get_aim_offset"):
+		return $CurrentAbility.get_aim_offset()
+	return Vector2.ZERO
